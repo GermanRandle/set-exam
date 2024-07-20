@@ -1,21 +1,12 @@
-# Задание set
+# Set Assignment
 
-В этом задании требуется написать класс реализующий (можно несбалансированное)
-бинарное дерево поиска.
+In this assignment, you are required to write a class implementing a (possibly unbalanced) binary search tree.
 
-Список функций которые необходимо реализовать указаны в файле `set.h`.
-Семантика функций должна совпадать с поведением `std::set` из стандартной
-библиотеки.
+A list of functions that need to be implemented is provided in the `set.h` file. The semantic behavior of these functions should match that of `std::set` from the standard library.
 
-В `set.h` указана требуемая вычислительная сложность для каждой функции, кроме
-`set::begin`, `set::end`, `set::iterator::operator++` и
-`set::iterator::operator--`. Для них требуется, чтобы отдельно каждая из
-функций работала не больше чем за `O(h)`, а также суммарно код
-`for (auto i = s.begin(); i != s.end(); ++i);` работал за `O(n)`.
+The `set.h` file specifies the required computational complexity for each function, except for `set::begin`, `set::end`, `set::iterator::operator++` and `set::iterator::operator--`. For these functions, it is required that each function individually works no more than `O(h)`, and additionally, the total code `for(var i = s.begin(); i != s.end(); ++i);` should work in `O(n)`.
 
-Так же `set` не должен требовать от элементов
-конструктора по умолчанию. Вдобавок пустой `set` ни в какой
-момент не должен содержать данных на хипе и, соответсвенно, 
-контсруктор по умолчанию не должен совершать никаких динамических аллокаций.
+Also, the `set` should not require a default constructor from its elements. Furthermore, an empty `set` should not hold any data on the heap at any time, and consequently, the default constructor should not perform any dynamic allocations.
 
-Hint: итераторы удобно реализовать, используя идею с фейковой вершиной.
+Hint: Iterators can conveniently be implemented using the idea of a sentinel node.
+
